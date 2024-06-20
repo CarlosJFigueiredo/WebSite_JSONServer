@@ -254,46 +254,40 @@ body {
 }
 
 /*Parceiros de trabalho*/
-.parceiros {
-  margin-left: 40px;
-  margin-right: 40px;
+.colaboradores {
+  padding: 20px;
 }
 
-.parceiros h2 {
-  margin-top: 30px;
-  margin-left: 20px;
-  color: var(--cor2);
+.colaboradores .card {
+    margin-bottom: 20px;
+    width: 300px; /* Ajuste a largura para diminuir o tamanho do card */
+    padding: 10px; /* Ajuste o padding se necessário */
+    maxheight: 400px;
+
 }
 
-.parceiros hr {
-  margin-left: 20px;
-  color: var(--cor0);
-  margin-right: 20px;
+.colaboradores .card img {
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
-.trabalho {
+.colaboradores .card-body {
   text-align: center;
 }
 
-.parceiro {
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
-  margin-left: 30px;
+.colaboradores .card-title {
+  font-size: 1.25rem;
 }
 
-.parceiro h3 a {
-  text-decoration: none;
-  font-size: 20px;
-  color: var(--cor2);
+.colaboradores .card-text {
+  font-size: 1rem;
+  color: #555;
 }
 
-.parceiro h3 a:hover {
-  color: var(--cor0);
-}
-
-.parceiro img {
-  border-radius: 10px;
+.colaboradores .btn {
+  margin-top: 10px;
 }
 
 /*Rodapé*/
@@ -306,138 +300,4 @@ body {
   margin-left: 20px;
   color: var(--cor0);
   margin-right: 20px;
-}
-
-
-/* Adicione estas regras de mídia ao final do seu CSS */
-
-  /* Estilos para telas menores */
-/* Estilos para dispositivos com largura até 768px (tablet e dispositivos móveis) */
-@media screen and (max-width: 768px) {
-  /*header*/
-  .cabecalho {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  .menu ul {
-    display: none;
-  }
-
-  .menu {
-    list-style-type: none;
-    margin-top: 10px;
-  }
-
-  .menu li {
-    display: block;
-    margin-left: 0;
-  }
-
-  .menu li a {
-    display: block;
-    padding: 10px 0;
-  }
-
-  .menu li a:hover {
-    color: var(--cor0);
-  }
-
-  /*Perfil*/
-  .perf h2 {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .perf hr {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .imagem-texto {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imagem-texto img {
-    margin-top: 10px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .texto {
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .texto p{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .redes-sociais {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .redes-sociais i {
-    margin: 5px;
-  }
-
-  .redes-sociais i:hover {
-    color: var(--cor1);
-  }
-
-  
-
-  /*Repositório*/
-  .cardss {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  /*Parceiros de trabalho*/
-  .parceiros {
-    text-align: center;
-  }
-
-  .colega {
-    margin: 10px auto;
-    margin-right: 15px;
-    text-align: center;
-  }
-
-  .colega h3 a:hover {
-    color: var(--cor0);
-  }
-
-  /*carrosel*/
-  .carousel-inner img {
-    width: 100%;
-    height: auto;
-
-  /*Subtítulos*/
-  .perf h2,
-  .repositorios h2,
-  .carrosel h2,
-  .colegas h2 {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  /*Linha*/
-  .carrosel hr,
-  .repositorios hr,
-  .colegas hr,
-  .rodape hr {
-    margin-left: 0;
-    margin-right: 0;
-    }  
-  }
 }
