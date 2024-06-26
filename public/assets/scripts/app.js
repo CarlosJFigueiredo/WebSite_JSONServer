@@ -2,14 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const perfilURL = 'https://api.github.com/users/CarlosJFigueiredo';
   const reposURL = 'https://api.github.com/users/CarlosJFigueiredo/repos';
   const colaboradoresURLs = [
-      'https://api.github.com/users/gabialvarenga',
-      'https://api.github.com/users/joaogscc',
-      'https://api.github.com/users/alvimdev',
-      'https://api.github.com/users/marcosffp',
-      'https://api.github.com/users/luisajardim'
+    'https://api.github.com/users/gabialvarenga',
+    'https://api.github.com/users/joaogscc',
+    'https://api.github.com/users/alvimdev',
+    'https://api.github.com/users/marcosffp',
+    'https://api.github.com/users/luisajardim'
   ];
 
-  // Função para buscar dados do perfil
   async function fetchProfile(url, containerId) {
     try {
       const response = await fetch(url);
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Função para buscar dados dos repositórios
   async function fetchRepos() {
     try {
       const response = await fetch(reposURL);
@@ -51,23 +49,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const reposContent = repos.map(repo => `
         <div class="col-md-4 col-sm-6">
-          <div class="card">
+          <div class="card" data-repo-id="${repo.id}">
             <div class="card-body">
               <h5 class="card-title">${repo.name}</h5>
               <p class="card-text">${repo.description || 'Sem descrição disponível.'}</p>
-              <a href="${repo.html_url}" class="btn btn-primary" target="_blank">Ver repositório</a>
+              <a href="#" class="btn btn-primary">Ver detalhes</a>
             </div>
           </div>
         </div>
       `).join('');
 
       document.getElementById('repos-content').innerHTML = reposContent;
+
+      // Adicionar evento de clique para cada card
+      document.querySelectorAll('.card[data-repo-id]').forEach(card => {
+        card.addEventListener('click', () => {
+          const repoId = card.getAttribute('data-repo-id');
+          window.location.href = `repo.html?id=${repoId}`;
+        });
+      });
+
     } catch (error) {
       console.error('Erro ao buscar dados dos repositórios:', error);
     }
   }
 
-  // Função para buscar dados dos colaboradores
   async function fetchCollaborators(urls) {
     try {
       const colaboradoresContent = await Promise.all(urls.map(async (url, index) => {
@@ -94,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Chamar as funções para buscar dados
   fetchProfile(perfilURL, 'perfil-content');
   fetchRepos();
   fetchCollaborators(colaboradoresURLs);
