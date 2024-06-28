@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap')
-/* resetando a página*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* Resetando a página */
 * {
     padding: 0;
     margin: 0;
@@ -12,292 +13,333 @@ html {
 }
 
 body {
-  height: 100%;
-  background-color: #828482;
-  font-family: var(--fonte-padrao);
+    height: 100%;
+    background-color: #828482;
+    font-family: var(--fonte-padrao);
 }
 
-/*variaveis*/
+/* Variáveis */
 :root {
-  --cor0: #000000;
-  --cor1: #000000;
-  --cor2: white;
-  --cor3: #9e978d;
-  --cor4: #2e3132;
-  --fonte-padrao: 'Quicksand', sans-serif;
-  
+    --cor0: #000000;
+    --cor1: #000000;
+    --cor2: white;
+    --cor3: #9e978d;
+    --cor4: #2e3132;
+    --fonte-padrao: 'Quicksand', sans-serif;
 }
 
-
-/* header styles */
-/*header*/
+/* Header styles */
 .cabecalho {
-  color: var(--cor2);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
+    color: var(--cor2);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Estilos para o logotipo */
 .logo {
-  color: var(--cor2);
-  text-decoration: none;
-  border: 2px solid var(--cor0);
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-left: 40px;
-  white-space: nowrap;
+    color: var(--cor2);
+    text-decoration: none;
+    border: 2px solid var(--cor0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 40px;
+    white-space: nowrap;
 }
 
-.logo:hover {
-  color: var(--cor1);
-}
-
+.logo:hover,
 .logo:active {
-  color: var(--cor1);
-}
-
-/* Estilos para o menu */
-.menu {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-}
-
-.cabecalho .menu li {
-  margin-left: 20px;
-  margin-right: 40px;
-  font-size: 27px;
-}
-
-.cabecalho .menu li a:hover {
-  color: var(--cor0);
-}
-
-.cabecalho .menu li a {
-  color: var(--cor2);
-  text-decoration: none;
+    color: var(--cor1);
 }
 
 .menu {
     list-style-type: none;
-  }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-  .menu li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-
-
-  .menu li a {
-    color: var(--cor2);
-    text-decoration: none;
-    vertical-align: middle;
-  }
 .menu li {
-  display: inline-block;
-  margin-left: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 27px;
+}
+
+.menu li a:hover {
+    color: var(--cor0);
 }
 
 .menu li a {
-  color: var(--cor2);
-  text-decoration: none;
-  vertical-align: middle;
+    color: var(--cor2);
+    text-decoration: none;
 }
 
-/*Main*/
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/*Perfil*/
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Main */
 .perf h2 {
-  margin-top: 30px;
-  margin-left: 70px;
-  color: white;
+    margin-top: 30px;
+    margin-left: 70px;
+    color: white;
 }
 
 .perf hr {
-  margin-left: 70px;
-  color: var(--cor0);
-  margin-right: 60px;
+    margin-left: 70px;
+    color: var(--cor0);
+    margin-right: 60px;
 }
 
 .imagem-texto {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .imagem-texto img {
-  margin-right: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  margin-left: 70px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-left: 70px;
 }
 
 .icones {
     display: flex;
-    align-items: center; 
-  }
-
-.texto{
-  color: var(--cor2);
-  margin-right: 40px;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.texto {
+    color: var(--cor2);
+    margin-right: 40px;
+    flex: 1;
+}
+
 .texto h3 {
-  color: var(--cor0);
+    color: var(--cor0);
 }
 
 .redes-sociais {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .redes-sociais i {
-  color: var(--cor2);
-  font-size: 24px;
-  margin: 5px;
+    color: var(--cor2);
+    font-size: 24px;
+    margin: 5px;
 }
 
 .redes-sociais i:hover {
-  color: var(--cor1);
+    color: var(--cor1);
 }
 
 .icone {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .tex {
-  flex: 1;
+    flex: 1;
 }
 
 .comp {
-  display: flex;
-  align-items: center; 
-  margin-right: 20px;/
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .comp i {
-  margin-right: 5px; 
-  color: rgba(8, 79, 160, 0.801);
+    margin-right: 5px;
+    color: rgba(8, 79, 160, 0.801);
 }
 
-/*Repositório*/
+/* Repositório */
 .card {
-  height: 100%; /* Garante que todos os cartões tenham a mesma altura */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card img {
-  max-height: 150px;
-  object-fit: cover;
+    max-height: 150px;
+    object-fit: cover;
 }
 
 .card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-body h5 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .card-body p {
-  flex: 1;
-  margin-bottom: 1rem;
+    flex: 1;
+    margin-bottom: 1rem;
 }
 
 .card-body a {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 @media (max-width: 576px) {
-  .card {
-    margin-bottom: 1rem;
-  }
+    .card {
+        margin-bottom: 1rem;
+    }
 }
 
-
-/*Conteúdo Sugerido*/
+/* Conteúdo Sugerido */
 .carrosel {
-  margin-left: 40px;
-  margin-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .carrosel h2 {
-  margin-top: 30px;
-  margin-left: 20px;
-  color: var(--cor2);
+    margin-top: 30px;
+    margin-left: 20px;
+    color: var(--cor2);
 }
 
 .carrosel hr {
-  margin-left: 20px;
-  color: var(--cor0);
-  margin-right: 20px;
+    margin-left: 20px;
+    color: var(--cor0);
+    margin-right: 20px;
 }
 
 .imagens {
-  margin-right: 20px;
-  margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .carousel-item img {
-  max-width: 100%;
-  height: 500px;
-  border-radius: 10px;
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
 }
 
-/*Parceiros de trabalho*/
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: auto;
+    }
+}
+
+/* Parceiros de trabalho */
 .colaboradores {
-  padding: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .colaboradores .card {
-    margin-bottom: 20px;
-    width: 300px; /* Ajuste a largura para diminuir o tamanho do card */
-    padding: 10px; /* Ajuste o padding se necessário */
-    maxheight: 400px;
-
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    max-height: 400px;
 }
 
 .colaboradores .card img {
-  height: 160px;
-  width: 160px;
-  object-fit: cover;
-  margin: 0 auto;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
 .colaboradores .card-body {
-  text-align: center;
+    text-align: center;
 }
 
 .colaboradores .card-title {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 .colaboradores .card-text {
-  font-size: 1rem;
-  color: #555;
+    font-size: 1rem;
+    color: #555;
 }
 
 .colaboradores .btn {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
-/*Rodapé*/
+/* Rodapé */
 .rodape p {
-  text-align: center;
-  color: var(--cor2);
+    text-align: center;
+    color: var(--cor2);
 }
 
 .rodape hr {
-  margin-left: 20px;
-  color: var(--cor0);
-  margin-right: 20px;
+    margin-left: 20px;
+    color: var(--cor0);
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .perf h2,
+    .perf hr {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .imagem-texto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imagem-texto img {
+        margin-left: 20px;
+    }
+
+    .texto {
+        margin: 20px;
+    }
+
+    .comp {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+    }
+
+    .carrosel {
+        margin: 20px;
+    }
 }
